@@ -1,3 +1,601 @@
-resume-website/
-├── index.html
-└── resume_wh.pdf
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Resume of Santhosh Varatharajan - Warehouse, Shipping & Receiving, and Material Handler.">
+
+  <title>Santhosh Varatharajan | Warehouse Professional</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1d4ed8;
+      --blue-light: #eff6ff;
+      --text: #243b53;
+      --muted: #627d98;
+      --border: #d9e2ec;
+      --background: #f5f7fa;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(100% - 32px, 1000px);
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    header {
+      background: linear-gradient(135deg, #102a43, #174a7e);
+      color: white;
+      padding: 60px 0 50px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -1px;
+    }
+
+    .headline {
+      margin: 0 0 18px;
+      font-size: 1.2rem;
+      color: #dbeafe;
+      font-weight: 600;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: #e8f1f8;
+      font-size: 0.98rem;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 10px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    /* Navigation */
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .container {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 14px 0;
+      white-space: nowrap;
+      font-size: 0.92rem;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    /* Main */
+
+    main {
+      padding: 42px 0;
+    }
+
+    section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(16, 42, 67, 0.04);
+    }
+
+    h2 {
+      color: var(--navy);
+      margin: 0 0 18px;
+      font-size: 1.5rem;
+      border-left: 4px solid var(--blue);
+      padding-left: 12px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    /* Skills */
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .skills li {
+      background: var(--blue-light);
+      border: 1px solid #dbeafe;
+      padding: 12px 14px;
+      border-radius: 9px;
+    }
+
+    /* Experience */
+
+    .job-header {
+      margin-bottom: 12px;
+    }
+
+    .job-title {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--navy);
+    }
+
+    .company {
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    .location {
+      color: var(--muted);
+    }
+
+    .experience-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .experience-list li {
+      margin-bottom: 9px;
+    }
+
+    /* Education */
+
+    .education-title {
+      margin: 0 0 5px;
+      font-size: 1.15rem;
+      color: var(--navy);
+    }
+
+    /* Additional information */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .info-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 15px;
+      background: #fbfcfe;
+    }
+
+    /* Buttons */
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: white;
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+
+    footer {
+      text-align: center;
+      padding: 28px 16px 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 46px 0 40px;
+      }
+
+      .hero {
+        display: block;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-top: 22px;
+      }
+
+      section {
+        padding: 22px;
+      }
+
+      .skills,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Print */
+
+    @media print {
+
+      nav,
+      .buttons {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      section {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      header {
+        color: black;
+        background: white;
+        border-bottom: 2px solid var(--navy);
+      }
+
+      .headline,
+      .contact {
+        color: var(--text);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container hero">
+
+      <div>
+
+        <h1>Santhosh Varatharajan</h1>
+
+        <p class="headline">
+          Warehouse • Shipping &amp; Receiving • Material Handling
+        </p>
+
+        <div class="contact">
+
+          <span>Mississauga, ON</span>
+
+          <a href="tel:+16476753987">
+            647-675-3987
+          </a>
+
+          <a href="mailto:santhoshvaratharajan@gmail.com">
+            santhoshvaratharajan@gmail.com
+          </a>
+
+        </div>
+
+        <div class="buttons">
+
+          <!-- Your actual PDF filename -->
+          <a
+            class="button button-primary"
+            href="resume_wh.pdf"
+            target="_blank"
+          >
+            Download Resume
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="mailto:santhoshvaratharajan@gmail.com"
+          >
+            Contact Me
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="badge">
+        Ontario G Driver's Licence
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="container">
+
+      <a href="#objective">Objective</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#experience">Experience</a>
+
+      <a href="#education">Education</a>
+
+      <a href="#additional">Additional</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MAIN CONTENT -->
+
+  <main class="container">
+
+
+    <!-- OBJECTIVE -->
+
+    <section id="objective">
+
+      <h2>Warehouse Objective</h2>
+
+      <p>
+        Reliable and hardworking individual seeking an entry-level Warehouse,
+        Shipping &amp; Receiving, or Material Handler position. Experience with
+        inventory receiving, order verification, quality checks, packing,
+        loading, unloading, and delivery support. Able to lift up to 50 lbs
+        and work efficiently in fast-paced environments while following
+        safety procedures.
+      </p>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+      <h2>Warehouse Skills</h2>
+
+      <ul class="skills">
+
+        <li>
+          Inventory receiving, inspection, organization, and basic quality control
+        </li>
+
+        <li>
+          Order verification, picking, packing, and preparation
+        </li>
+
+        <li>
+          Loading, unloading, material handling, and delivery support
+        </li>
+
+        <li>
+          Stock organization, inventory counting, and product handling
+        </li>
+
+        <li>
+          Workplace safety, cleanliness, and standard operating procedures
+        </li>
+
+        <li>
+          Basic math, computer/POS systems, teamwork, and attention to detail
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+      <h2>Relevant Work Experience</h2>
+
+      <div class="job-header">
+
+        <h3 class="job-title">
+          <span class="company">BarBurrito</span>
+          — Food Service Team Member
+        </h3>
+
+        <div class="location">
+          Kitchener, ON
+        </div>
+
+      </div>
+
+
+      <ul class="experience-list">
+
+        <li>
+          Received incoming inventory and verified deliveries against
+          purchase orders to confirm items and quantities were correct.
+        </li>
+
+        <li>
+          Inspected incoming products for quality, condition, and accuracy
+          before storing them.
+        </li>
+
+        <li>
+          Organized and stored inventory and supplies to maintain an
+          efficient and accessible work area.
+        </li>
+
+        <li>
+          Prepared, packed, and verified customer and large-volume orders
+          according to order requirements.
+        </li>
+
+        <li>
+          Loaded and unloaded products and supplies safely during daily
+          operations.
+        </li>
+
+        <li>
+          Prepared orders for delivery and assisted with local deliveries
+          when required.
+        </li>
+
+        <li>
+          Used basic math and measuring skills for inventory, portions,
+          billing, and order preparation.
+        </li>
+
+        <li>
+          Followed food safety, sanitation, workplace safety, and
+          established operating procedures.
+        </li>
+
+        <li>
+          Maintained clean and organized storage and work areas.
+        </li>
+
+        <li>
+          Worked with team members to complete daily tasks accurately and
+          efficiently in a fast-paced environment.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+      <h2>Education</h2>
+
+      <h3 class="education-title">
+        Bachelor of Science (B.Sc.) — Computer Science
+      </h3>
+
+      <p>
+        Nehru Memorial College, India
+      </p>
+
+    </section>
+
+
+    <!-- ADDITIONAL INFORMATION -->
+
+    <section id="additional">
+
+      <h2>Additional Information</h2>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          Valid Ontario G Driver's Licence
+        </div>
+
+        <div class="info-card">
+          Able to lift up to 50 lbs
+        </div>
+
+        <div class="info-card">
+          Available for full-time, part-time, evening, weekend, and shift work
+        </div>
+
+        <div class="info-card">
+          Quick to learn handheld scanners, warehouse software, and new equipment
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Santhosh Varatharajan · Mississauga, Ontario
+
+  </footer>
+
+</body>
+</html>
